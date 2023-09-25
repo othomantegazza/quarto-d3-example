@@ -1,14 +1,13 @@
 ---
 title: "Start Your Quarto Project Here"
-author: "Yourself"
+author: "Otho Mantegazza"
 date: today
 editor_options: 
   chunk_output_type: console
 ---
 
-# My Analysis
+<div id="mychart"></div>
 
-```{r}
-print("Hello There!")
-```
-
+<!-- Load D3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="js/scatterplot.js"></script>
