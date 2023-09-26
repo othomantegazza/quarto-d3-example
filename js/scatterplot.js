@@ -45,10 +45,28 @@ svg.append("g")
         .attr("transform", `translate(0,${chartHeight - marginBottom})`)
         .attr("class", "xaxis")
         .call(xAxis)
+        .call(
+          g => g.append("text")
+            .attr("x", chartWidth)
+            .attr("y", marginBottom - 4)
+            .attr("font-size", "16px")
+            .attr("fill", "currentColor")
+            .attr("text-anchor", "end")
+            .text("Body Mass [g]")
+          )
 
-// axis y
+// attach y axis
 svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .attr("class", "yaxis")
     .call(yAxis)
+    .call(
+      g => g.append("text")
+        .attr("x", -marginLeft)
+        .attr("y", 0)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "start")
+        .attr("font-size", "16px")
+        .text("Flipper Length [mm]")
+      )
 
