@@ -11,7 +11,7 @@ editor_options:
 
 <div id="mychart"></div>
 
-## This are the data
+## We are using this dataset
 
 ```{r}
 library(tidyverse) 
