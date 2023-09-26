@@ -1,5 +1,8 @@
 // a scatterplot from penguin data
 
+// text font-size
+const labelSize = "16px"
+
 // width
 var chartWidth = 800
 var chartHeight = 600
@@ -49,7 +52,7 @@ svg.append("g")
           g => g.append("text")
             .attr("x", chartWidth)
             .attr("y", marginBottom - 4)
-            .attr("font-size", "16px")
+            .attr("font-size", labelSize)
             .attr("fill", "currentColor")
             .attr("text-anchor", "end")
             .text("Body Mass [g]")
@@ -66,7 +69,7 @@ svg.append("g")
         .attr("y", 0)
         .attr("fill", "currentColor")
         .attr("text-anchor", "start")
-        .attr("font-size", "16px")
+        .attr("font-size", labelSize)
         .text("Flipper Length [mm]")
       )
 
