@@ -94,5 +94,4 @@ svg.append("g")
     .attr("cx", i => xScale(x(i)))
     .attr("cy", i => yScale(y(i)))
     .attr("r", "3px")
-    .attr("fill", none)
   
