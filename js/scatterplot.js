@@ -1,5 +1,8 @@
 // a scatterplot from penguin data
 
+// html target element to attach chart
+const chartTarget = "#mychart"
+
 // define aesthetic mappings
 const x = (d) => d.body_mass_g
 const y = (d) => d.flipper_length_mm
@@ -8,8 +11,9 @@ const y = (d) => d.flipper_length_mm
 const labelSize = "16px"
 
 // width
-var chartWidth = 800
+var chartWidth = d3.select(chartTarget).node().getBoundingClientRect().width
 var chartHeight = 600
+
 
 // margins
 const marginTop = 40 // top margin, in pixels
@@ -27,8 +31,14 @@ const X = d3.map(penguins, x)
 const Y = d3.map(penguins, y)
 
 // domains
-const xDomain = [0, d3.max(X) + d3.max(X)*rangeMult]
-const yDomain = [0, d3.max(Y) + d3.max(Y)*rangeMult]
+const xDomain = [
+  d3.min(X) - d3.min(X)*rangeMult,
+  d3.max(X) + d3.max(X)*rangeMult
+]
+const yDomain = [
+  d3.min(Y) - d3.min(Y)*rangeMult,
+  d3.max(Y) + d3.max(Y)*rangeMult
+]
 
 // scale
 const xScale = d3.scaleLinear(xDomain, xRange)
@@ -39,10 +49,8 @@ const xAxis = d3.axisBottom(xScale)
 const yAxis = d3.axisLeft(yScale)
 
 // initiate svg 
-svg = d3.select("#mychart")
+svg = d3.select(chartTarget)
   .append("svg")
-  .attr("width", `${chartWidth}px`)
-  .attr("height", `${chartHeight}px`)
   .attr("viewBox", [0, 0, chartWidth, chartHeight])
   .attr("id", "svgscatter")
   .attr("style", `max-width: 100%`)
