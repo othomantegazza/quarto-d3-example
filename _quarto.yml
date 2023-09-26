@@ -15,6 +15,12 @@ format:
   html:
     theme: style/custom.scss
     toc: true
+    df-print: kable
+
+execute: 
+  echo: false
+  warning: false
+  
 
 knitr:
   opts_chunk: 

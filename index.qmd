@@ -1,12 +1,28 @@
 ---
-title: "Start Your Quarto Project Here"
+title: "Penguins Again"
 author: "Otho Mantegazza"
 date: today
 editor_options: 
   chunk_output_type: console
 ---
 
+```{r}
+library(tidyverse) 
+```
+
+```{r}
+penguins_url <- "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv"
+penguins <- read_csv(penguins_url)
+```
+
+```{r} 
+penguins
+```
+
+## Your chart appears here
+
 <div id="mychart"></div>
+
 
 <!-- Load D3 -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
