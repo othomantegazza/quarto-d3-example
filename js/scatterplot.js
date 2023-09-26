@@ -43,7 +43,7 @@ svg = d3.select("#mychart")
   .attr("id", "svgscatter")
   .attr("style", `max-width: 100%`)
 
-// attach x axis
+// append x axis
 svg.append("g")
         .attr("transform", `translate(0,${chartHeight - marginBottom})`)
         .attr("class", "xaxis")
@@ -58,7 +58,7 @@ svg.append("g")
             .text("Body Mass [g]")
           )
 
-// attach y axis
+// append y axis
 svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .attr("class", "yaxis")
@@ -66,7 +66,7 @@ svg.append("g")
     .call(
       g => g.append("text")
         .attr("x", -marginLeft)
-        .attr("y", 0)
+        .attr("y", marginTop - 10)
         .attr("fill", "currentColor")
         .attr("text-anchor", "start")
         .attr("font-size", labelSize)
