@@ -1,5 +1,9 @@
 // a scatterplot from penguin data
 
+// define aesthetic mappings
+const x = (d) => d.body_mass_g
+const y = (d) => d.flipper_length_mm
+
 // text font-size
 const labelSize = "16px"
 
@@ -19,8 +23,8 @@ const xRange = [marginLeft, chartWidth - marginRight] // [left, right]
 const yRange = [chartHeight - marginBottom, marginTop] // [bottom, top]
 
 // values
-const X = d3.map(penguins, d => d.body_mass_g)
-const Y = d3.map(penguins, d => d.flipper_length_mm)
+const X = d3.map(penguins, x)
+const Y = d3.map(penguins, y)
 
 // domains
 const xDomain = [0, d3.max(X) + d3.max(X)*rangeMult]
