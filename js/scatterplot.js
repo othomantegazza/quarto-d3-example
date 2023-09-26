@@ -77,3 +77,14 @@ svg.append("g")
         .text("Flipper Length [mm]")
       )
 
+// append circles
+svg.append("g")
+    .attr("stroke-width", "1px")
+    .selectAll("circle")
+    .data(penguins)
+    .join("circle")
+    .attr("cx", i => xScale(x(i)))
+    .attr("cy", i => yScale(y(i)))
+    .attr("r", "3px")
+    .attr("fill", none)
+  
