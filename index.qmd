@@ -6,6 +6,13 @@ editor_options:
   chunk_output_type: console
 ---
 
+
+## Your chart appears here
+
+<div id="mychart"></div>
+
+## This are the data
+
 ```{r}
 library(tidyverse) 
 ```
@@ -31,11 +38,6 @@ penguins %>%
     'data/penguins.js'
   )
 ```
-
-## Your chart appears here
-
-<div id="mychart"></div>
-
 
 <!-- Load D3 -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
