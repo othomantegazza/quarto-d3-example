@@ -1,6 +1,6 @@
 # Content
 
-A Quarto project starter for the workshop in [Data Visualization for Scientists](https://github.com/othomantegazza/dataviz-for-scientists-slides/).
+A basic example of using bare D3 in a quarto notebook (no observableJS), for the class in [Data Visualization for Scientists](https://github.com/othomantegazza/dataviz-for-scientists-slides/).
 
 # Use
 
@@ -8,9 +8,9 @@ A Quarto project starter for the workshop in [Data Visualization for Scientists]
 
 2. Change the project title in [_quarto.yml](_quarto.yml).
 
-3 .Update the [LICENSE](LICENSE). 
+3. Update the [LICENSE](LICENSE). 
 
-3. Edit at will, starting from [index.qmd](index.qmd). Enjoy.
+4. Edit at will, starting from [index.qmd](index.qmd). Enjoy.
 
 # Deploy Locally
 
